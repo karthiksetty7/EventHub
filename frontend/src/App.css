@@ -1,0 +1,402 @@
+/* ==========================================
+   APPLICATION ROOT CONTAINER
+========================================== */
+
+.app-container {
+  min-height: 100vh;
+
+  background-color: var(--background-color);
+
+  color: var(--text-color);
+
+  overflow-x: hidden;
+}
+
+/* ==========================================
+   ROUTE PAGE WRAPPER
+========================================== */
+
+.route-page {
+  width: 100%;
+
+  min-height: 100vh;
+}
+
+/* ==========================================
+   SECTION STYLES
+========================================== */
+
+.section {
+  padding: 60px 0;
+}
+
+.section-title {
+  font-size: 32px;
+  font-weight: 700;
+
+  color: var(--secondary-color);
+
+  margin-bottom: 15px;
+}
+
+.section-description {
+  font-size: 16px;
+
+  color: var(--light-text-color);
+
+  line-height: 1.7;
+}
+
+/* ==========================================
+   COMMON GRID LAYOUTS
+========================================== */
+
+.grid-layout {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+  gap: 24px;
+}
+
+/* ==========================================
+   DASHBOARD LAYOUT
+========================================== */
+
+.dashboard-layout {
+  display: flex;
+
+  min-height: 100vh;
+}
+
+/* ==========================================
+   DASHBOARD CONTENT
+========================================== */
+
+.dashboard-content {
+  flex: 1;
+
+  padding: 30px;
+
+  overflow-x: hidden;
+}
+
+/* ==========================================
+   PAGE HEADER
+========================================== */
+
+.page-header {
+  margin-bottom: 30px;
+}
+
+.page-title {
+  font-size: 30px;
+  font-weight: 700;
+
+  color: var(--secondary-color);
+
+  margin-bottom: 10px;
+}
+
+.page-subtitle {
+  font-size: 15px;
+
+  color: var(--light-text-color);
+}
+
+/* ==========================================
+   FORM STYLES
+========================================== */
+
+.form-container {
+  width: 100%;
+  max-width: 500px;
+
+  margin: auto;
+
+  background-color: var(--white-color);
+
+  padding: 35px;
+
+  border-radius: var(--border-radius);
+
+  box-shadow: var(--shadow-md);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  color: var(--secondary-color);
+}
+
+.form-input,
+.form-textarea,
+.form-select {
+  width: 100%;
+
+  padding: 12px 14px;
+
+  border-radius: var(--border-radius);
+
+  border: 1px solid var(--border-color);
+
+  font-size: 15px;
+
+  background-color: var(--white-color);
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+  border-color: var(--primary-color);
+
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* ==========================================
+   FORM ERROR
+========================================== */
+
+.form-error {
+  margin-top: 6px;
+
+  font-size: 13px;
+
+  color: var(--danger-color);
+}
+
+/* ==========================================
+   AUTH PAGE
+========================================== */
+
+.auth-page {
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+
+  background: linear-gradient(135deg, #eff6ff, #dbeafe);
+}
+
+/* ==========================================
+   AUTH CARD
+========================================== */
+
+.auth-card {
+  width: 100%;
+  max-width: 450px;
+
+  background-color: var(--white-color);
+
+  padding: 35px;
+
+  border-radius: 16px;
+
+  box-shadow: var(--shadow-md);
+}
+
+/* ==========================================
+   AUTH TITLE
+========================================== */
+
+.auth-title {
+  font-size: 28px;
+  font-weight: 700;
+
+  text-align: center;
+
+  margin-bottom: 10px;
+
+  color: var(--secondary-color);
+}
+
+.auth-subtitle {
+  text-align: center;
+
+  color: var(--light-text-color);
+
+  margin-bottom: 30px;
+}
+
+/* ==========================================
+   TABLE STYLES
+========================================== */
+
+.table-container {
+  width: 100%;
+
+  overflow-x: auto;
+
+  background-color: var(--white-color);
+
+  border-radius: var(--border-radius);
+
+  box-shadow: var(--shadow-sm);
+}
+
+.table {
+  width: 100%;
+
+  border-collapse: collapse;
+}
+
+.table thead {
+  background-color: #f1f5f9;
+}
+
+.table th,
+.table td {
+  padding: 15px;
+
+  text-align: left;
+
+  border-bottom: 1px solid var(--border-color);
+}
+
+.table th {
+  font-size: 14px;
+  font-weight: 700;
+
+  color: var(--secondary-color);
+}
+
+.table td {
+  font-size: 14px;
+
+  color: var(--text-color);
+}
+
+/* ==========================================
+   STATUS BADGES
+========================================== */
+
+.badge {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 6px 12px;
+
+  border-radius: 999px;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.badge-success {
+  background-color: #dcfce7;
+
+  color: #15803d;
+}
+
+.badge-danger {
+  background-color: #fee2e2;
+
+  color: #b91c1c;
+}
+
+.badge-warning {
+  background-color: #fef3c7;
+
+  color: #b45309;
+}
+
+/* ==========================================
+   ANIMATIONS
+========================================== */
+
+.fade-in {
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+========================================== */
+
+@media screen and (max-width: 992px) {
+  .dashboard-content {
+    padding: 20px;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+
+  .page-title {
+    font-size: 26px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .section {
+    padding: 40px 0;
+  }
+
+  .dashboard-layout {
+    flex-direction: column;
+  }
+
+  .form-container,
+  .auth-card {
+    padding: 25px;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+
+  .page-title {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .dashboard-content {
+    padding: 15px;
+  }
+
+  .form-container,
+  .auth-card {
+    padding: 20px;
+  }
+
+  .section-title {
+    font-size: 22px;
+  }
+
+  .page-title {
+    font-size: 20px;
+  }
+
+  .table th,
+  .table td {
+    padding: 12px;
+  }
+}

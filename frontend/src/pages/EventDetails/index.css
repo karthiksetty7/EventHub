@@ -1,0 +1,573 @@
+/* ==========================================
+   EVENT DETAILS PAGE
+========================================== */
+
+.event-details-page {
+  width: 100%;
+  min-height: 100vh;
+
+  padding: clamp(12px, 2vw, 32px);
+
+  background: linear-gradient(180deg, #f8fafc 0%, #eff6ff 100%);
+
+  box-sizing: border-box;
+
+  overflow-x: hidden;
+}
+
+/* ==========================================
+   MAIN CONTAINER
+========================================== */
+
+.event-details-container {
+  width: 100%;
+  max-width: 1800px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: minmax(320px, 1fr) minmax(320px, 0.95fr);
+
+  gap: clamp(24px, 3vw, 52px);
+
+  align-items: start;
+}
+
+/* ==========================================
+   IMAGE SECTION
+========================================== */
+
+.event-image-section {
+  width: 100%;
+
+  position: sticky;
+
+  top: 24px;
+}
+
+.main-event-image-container {
+  width: 100%;
+
+  height: clamp(280px, 48vw, 760px);
+
+  overflow: hidden;
+
+  border-radius: clamp(18px, 2vw, 32px);
+
+  background-color: #ffffff;
+
+  box-shadow:
+    0 10px 32px rgba(15, 23, 42, 0.08),
+    0 4px 12px rgba(15, 23, 42, 0.05);
+}
+
+.main-event-image {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.5s ease;
+}
+
+.main-event-image:hover {
+  transform: scale(1.04);
+}
+
+/* ==========================================
+   CONTENT SECTION
+========================================== */
+
+.event-content-section {
+  width: 100%;
+
+  background: rgba(255, 255, 255, 0.96);
+
+  backdrop-filter: blur(10px);
+
+  padding: clamp(22px, 3vw, 46px);
+
+  border-radius: clamp(22px, 2vw, 34px);
+
+  border: 1px solid rgba(226, 232, 240, 0.9);
+
+  box-shadow:
+    0 10px 30px rgba(15, 23, 42, 0.06),
+    0 2px 10px rgba(15, 23, 42, 0.04);
+
+  overflow: hidden;
+}
+
+/* ==========================================
+   CATEGORY BADGE
+========================================== */
+
+.event-category-badge {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px 18px;
+
+  border-radius: 999px;
+
+  background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+
+  color: #1d4ed8;
+
+  font-size: clamp(11px, 1vw, 14px);
+
+  font-weight: 700;
+
+  letter-spacing: 0.4px;
+
+  margin-bottom: 24px;
+
+  max-width: 100%;
+
+  word-break: break-word;
+}
+
+/* ==========================================
+   TITLE
+========================================== */
+
+.event-title {
+  font-size: clamp(2rem, 2vw, 2rem);
+
+  color: #0f172a;
+
+  font-weight: 800;
+
+  line-height: 1.15;
+
+  margin-bottom: 22px;
+
+  word-break: break-word;
+
+  overflow-wrap: break-word;
+}
+
+/* ==========================================
+   DESCRIPTION
+========================================== */
+
+.event-description {
+  color: #475569;
+
+  font-size: clamp(0.96rem, 1.2vw, 1.14rem);
+
+  line-height: 2;
+
+  margin-bottom: 34px;
+
+  word-break: break-word;
+
+  overflow-wrap: break-word;
+}
+
+/* ==========================================
+   META DETAILS
+========================================== */
+
+.event-meta-container {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+  gap: 18px;
+
+  margin-bottom: 34px;
+}
+
+.event-meta-item {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  min-height: 72px;
+
+  padding: 16px 18px;
+
+  border-radius: 18px;
+
+  background-color: #f8fafc;
+
+  border: 1px solid #e2e8f0;
+
+  transition: all 0.3s ease;
+
+  overflow: hidden;
+}
+
+.event-meta-item:hover {
+  transform: translateY(-2px);
+
+  background-color: #eff6ff;
+
+  border-color: #bfdbfe;
+}
+
+.meta-icon {
+  color: #2563eb;
+
+  font-size: clamp(16px, 1.2vw, 20px);
+
+  flex-shrink: 0;
+}
+
+.event-meta-item span {
+  color: #334155;
+
+  font-size: clamp(0.9rem, 1vw, 1rem);
+
+  font-weight: 600;
+
+  line-height: 1.6;
+
+  word-break: break-word;
+
+  overflow-wrap: break-word;
+}
+
+/* ==========================================
+   ORGANIZER
+========================================== */
+
+.organizer-container {
+  margin-bottom: 34px;
+
+  padding: clamp(18px, 2vw, 28px);
+
+  border-radius: 22px;
+
+  background: linear-gradient(135deg, #f8fafc, #eff6ff);
+
+  border: 1px solid #dbeafe;
+}
+
+.organizer-container h3 {
+  color: #0f172a;
+
+  font-size: clamp(1rem, 1.4vw, 1.3rem);
+
+  font-weight: 700;
+
+  margin-bottom: 10px;
+}
+
+.organizer-container p {
+  color: #475569;
+
+  font-size: clamp(0.92rem, 1vw, 1rem);
+
+  line-height: 1.8;
+
+  word-break: break-word;
+
+  overflow-wrap: break-word;
+}
+
+/* ==========================================
+   BOOK BUTTON
+========================================== */
+
+.book-now-button {
+  width: 100%;
+
+  min-height: clamp(54px, 6vw, 66px);
+
+  border: none;
+
+  border-radius: 18px;
+
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+
+  color: #ffffff;
+
+  font-size: clamp(0.95rem, 1.1vw, 1.1rem);
+
+  font-weight: 700;
+
+  letter-spacing: 0.4px;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+
+  box-shadow: 0 10px 24px rgba(37, 99, 235, 0.22);
+}
+
+.book-now-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 16px 32px rgba(37, 99, 235, 0.28);
+}
+
+.book-now-button:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+
+  transform: none;
+
+  box-shadow: none;
+}
+
+/* ==========================================
+   ERROR CONTAINER
+========================================== */
+
+.event-error-container {
+  max-width: 700px;
+
+  margin: 40px auto;
+
+  padding: 18px;
+
+  border-radius: 16px;
+
+  background-color: #fee2e2;
+
+  border: 1px solid #fecaca;
+
+  color: #dc2626;
+
+  font-size: clamp(14px, 1vw, 16px);
+
+  font-weight: 600;
+
+  text-align: center;
+}
+
+/* ==========================================
+   ULTRA LARGE SCREENS
+========================================== */
+
+@media screen and (min-width: 1920px) {
+  .event-details-container {
+    max-width: 1900px;
+  }
+
+  .event-content-section {
+    padding: 56px;
+  }
+}
+
+/* ==========================================
+   LARGE LAPTOPS
+========================================== */
+
+@media screen and (max-width: 1400px) {
+  .event-details-container {
+    gap: 34px;
+  }
+}
+
+/* ==========================================
+   TABLETS & SMALL LAPTOPS
+========================================== */
+
+@media screen and (max-width: 992px) {
+  .event-details-container {
+    grid-template-columns: 1fr;
+  }
+
+  .event-image-section {
+    position: static;
+  }
+
+  .main-event-image-container {
+    height: clamp(260px, 60vw, 520px);
+  }
+
+  .event-content-section {
+    width: 100%;
+  }
+}
+
+/* ==========================================
+   TABLETS
+========================================== */
+
+@media screen and (max-width: 768px) {
+  .event-details-page {
+    padding: 16px;
+  }
+
+  .event-content-section {
+    padding: 24px;
+  }
+
+  .event-meta-container {
+    grid-template-columns: 1fr;
+  }
+
+  .event-meta-item {
+    min-height: auto;
+  }
+
+  .event-title {
+    line-height: 1.2;
+  }
+}
+
+/* ==========================================
+   MOBILE DEVICES
+========================================== */
+
+@media screen and (max-width: 576px) {
+  .event-details-page {
+    padding: 12px;
+  }
+
+  .event-details-container {
+    gap: 20px;
+  }
+
+  .event-content-section {
+    padding: 20px;
+
+    border-radius: 24px;
+  }
+
+  .main-event-image-container {
+    height: 260px;
+
+    border-radius: 24px;
+  }
+
+  .event-title {
+    font-size: 30px;
+  }
+
+  .event-description {
+    font-size: 15px;
+
+    line-height: 1.8;
+  }
+
+  .event-meta-item {
+    padding: 14px 16px;
+  }
+
+  .book-now-button {
+    border-radius: 16px;
+  }
+}
+
+/* ==========================================
+   SMALL MOBILE DEVICES
+========================================== */
+
+@media screen and (max-width: 360px) {
+  .event-details-page {
+    padding: 10px;
+  }
+
+  .event-content-section {
+    padding: 16px;
+  }
+
+  .main-event-image-container {
+    height: 220px;
+  }
+
+  .event-title {
+    font-size: 24px;
+  }
+
+  .event-description {
+    font-size: 14px;
+  }
+
+  .event-meta-item {
+    gap: 10px;
+
+    padding: 12px 14px;
+  }
+
+  .event-meta-item span {
+    font-size: 13px;
+  }
+
+  .book-now-button {
+    min-height: 52px;
+
+    font-size: 14px;
+  }
+}
+
+/* ==========================================
+   ULTRA SMALL DEVICES
+========================================== */
+
+@media screen and (max-width: 280px) {
+  .event-title {
+    font-size: 20px;
+  }
+
+  .event-content-section {
+    padding: 14px;
+  }
+
+  .event-meta-item {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .book-now-button {
+    font-size: 13px;
+  }
+}
+
+/* ==========================================
+   LANDSCAPE MOBILE
+========================================== */
+
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  .event-image-section {
+    position: static;
+  }
+
+  .main-event-image-container {
+    height: 320px;
+  }
+}
+
+/* ==========================================
+   FOLD DEVICES
+========================================== */
+
+@media screen and (max-width: 540px) and (min-height: 700px) {
+  .event-title {
+    font-size: 28px;
+  }
+
+  .event-meta-container {
+    gap: 14px;
+  }
+}
+
+/* ==========================================
+   EXTRA WIDE DISPLAYS
+========================================== */
+
+@media screen and (min-width: 2200px) {
+  .event-details-container {
+    max-width: 2100px;
+  }
+
+  .event-content-section {
+    padding: 64px;
+  }
+
+  .event-title {
+    font-size: 4.5rem;
+  }
+}

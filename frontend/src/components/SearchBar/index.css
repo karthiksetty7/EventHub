@@ -1,0 +1,238 @@
+/* ==========================================
+   SEARCH BAR CONTAINER
+========================================== */
+
+.searchbar-container {
+  width: 100%;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 20px;
+
+  margin-bottom: 30px;
+
+  flex-wrap: wrap;
+}
+
+/* ==========================================
+   SEARCH FORM
+========================================== */
+
+.search-form {
+  flex: 1;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  min-width: 300px;
+}
+
+/* ==========================================
+   SEARCH INPUT CONTAINER
+========================================== */
+
+.search-input-container {
+  flex: 1;
+
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+}
+
+.search-icon {
+  position: absolute;
+
+  left: 16px;
+
+  color: #64748b;
+
+  font-size: 15px;
+}
+
+.search-input {
+  width: 100%;
+
+  height: 52px;
+
+  border: 1px solid #cbd5e1;
+
+  border-radius: 12px;
+
+  padding: 0 50px;
+
+  font-size: 15px;
+
+  outline: none;
+
+  transition: 0.3s ease;
+
+  background-color: #ffffff;
+}
+
+.search-input:focus {
+  border-color: #2563eb;
+
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+}
+
+/* ==========================================
+   CLEAR BUTTON
+========================================== */
+
+.clear-button {
+  position: absolute;
+
+  right: 16px;
+
+  border: none;
+
+  background: transparent;
+
+  cursor: pointer;
+
+  color: #64748b;
+
+  font-size: 14px;
+}
+
+/* ==========================================
+   SEARCH BUTTON
+========================================== */
+
+.search-button {
+  height: 52px;
+
+  border: none;
+
+  background-color: #2563eb;
+
+  color: #ffffff;
+
+  padding: 0 24px;
+
+  border-radius: 12px;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+
+  white-space: nowrap;
+}
+
+.search-button:hover {
+  background-color: #1d4ed8;
+}
+
+.search-button:disabled {
+  opacity: 0.7;
+
+  cursor: not-allowed;
+}
+
+/* ==========================================
+   FILTER CONTAINER
+========================================== */
+
+.filter-container {
+  min-width: 220px;
+}
+
+.category-select {
+  width: 100%;
+
+  height: 52px;
+
+  border: 1px solid #cbd5e1;
+
+  border-radius: 12px;
+
+  padding: 0 16px;
+
+  font-size: 15px;
+
+  outline: none;
+
+  background-color: #ffffff;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.category-select:focus {
+  border-color: #2563eb;
+
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+========================================== */
+
+/* Tablets */
+@media screen and (max-width: 768px) {
+  .searchbar-container {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .search-form {
+    width: 100%;
+
+    min-width: 100%;
+  }
+
+  .filter-container {
+    width: 100%;
+  }
+}
+
+/* Mobile Devices */
+@media screen and (max-width: 576px) {
+  .search-form {
+    flex-direction: column;
+  }
+
+  .search-input-container {
+    width: 100%;
+  }
+
+  .search-button {
+    width: 100%;
+  }
+
+  .search-input,
+  .category-select,
+  .search-button {
+    height: 48px;
+
+    font-size: 14px;
+  }
+}
+
+/* Small Mobile Devices */
+@media screen and (max-width: 360px) {
+  .search-input,
+  .category-select,
+  .search-button {
+    font-size: 13px;
+  }
+
+  .search-button {
+    padding: 0 16px;
+  }
+}
