@@ -1,0 +1,489 @@
+/* ==========================================
+   ORGANIZER DASHBOARD PAGE
+========================================== */
+
+.organizer-dashboard-page {
+  width: 100%;
+  min-height: 100vh;
+  padding: clamp(14px, 2vw, 32px);
+  box-sizing: border-box;
+  overflow-x: hidden;
+  animation: fadeIn 0.4s ease;
+}
+
+/* ==========================================
+   FADE ANIMATION
+========================================== */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==========================================
+   DASHBOARD HEADER
+========================================== */
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: clamp(14px, 2vw, 24px);
+  margin-bottom: clamp(24px, 3vw, 42px);
+  flex-wrap: wrap;
+}
+
+.dashboard-header h1 {
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.dashboard-header p {
+  color: #64748b;
+  font-size: clamp(0.92rem, 1.6vw, 1.05rem);
+  line-height: 1.7;
+  max-width: 700px;
+}
+
+/* ==========================================
+   CREATE EVENT BUTTON
+========================================== */
+
+.create-event-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-decoration: none;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: #ffffff;
+  padding: 14px 24px;
+  border-radius: 16px;
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+  font-weight: 700;
+  min-height: 54px;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.18);
+}
+
+.create-event-button:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #1d4ed8, #1e40af);
+  box-shadow: 0 12px 28px rgba(37, 99, 235, 0.28);
+}
+
+/* ==========================================
+   ERROR MESSAGE
+========================================== */
+
+.dashboard-error-message {
+  background-color: #fee2e2;
+  color: #dc2626;
+  padding: 16px 18px;
+  border-radius: 16px;
+  margin-bottom: 28px;
+  font-size: clamp(0.88rem, 1.3vw, 1rem);
+  font-weight: 600;
+  border: 1px solid #fecaca;
+}
+
+/* ==========================================
+   STATS GRID
+========================================== */
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: clamp(18px, 2vw, 28px);
+  margin-bottom: clamp(30px, 3vw, 44px);
+}
+
+/* ==========================================
+   STAT CARD
+========================================== */
+
+.stat-card {
+  background-color: #ffffff;
+  border-radius: 26px;
+  padding: clamp(20px, 2vw, 30px);
+  display: flex;
+  align-items: center;
+  gap: clamp(16px, 2vw, 24px);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+  transition: all 0.3s ease;
+  min-height: 140px;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.1);
+}
+
+.stat-icon-container {
+  width: clamp(60px, 6vw, 76px);
+  height: clamp(60px, 6vw, 76px);
+  border-radius: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-size: clamp(1.4rem, 2vw, 2rem);
+  flex-shrink: 0;
+}
+
+.blue-bg {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+}
+
+.green-bg {
+  background: linear-gradient(135deg, #16a34a, #15803d);
+}
+
+.purple-bg {
+  background: linear-gradient(135deg, #7c3aed, #6d28d9);
+}
+
+.stat-card h2 {
+  font-size: clamp(1.6rem, 3vw, 2.3rem);
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 8px;
+  word-break: break-word;
+}
+
+.stat-card p {
+  color: #64748b;
+  font-size: clamp(0.88rem, 1.3vw, 1rem);
+  font-weight: 500;
+}
+
+/* ==========================================
+   EVENTS SECTION
+========================================== */
+
+.organizer-events-section {
+  width: 100%;
+}
+
+.events-header {
+  margin-bottom: clamp(18px, 2vw, 28px);
+}
+
+.events-header h2 {
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+  font-weight: 700;
+  color: #0f172a;
+}
+
+/* ==========================================
+   EVENTS GRID
+========================================== */
+
+.organizer-events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 310px), 1fr));
+  gap: clamp(18px, 2vw, 30px);
+}
+
+/* ==========================================
+   EVENT CARD
+========================================== */
+
+.organizer-event-card {
+  background-color: #ffffff;
+  border-radius: 26px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+  transition: all 0.35s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.organizer-event-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
+}
+
+/* ==========================================
+   EVENT IMAGE
+========================================== */
+
+.organizer-event-image-container {
+  width: 100%;
+  height: clamp(180px, 28vw, 240px);
+  overflow: hidden;
+  background-color: #e2e8f0;
+}
+
+.organizer-event-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.organizer-event-card:hover .organizer-event-image {
+  transform: scale(1.05);
+}
+
+/* ==========================================
+   EVENT CONTENT
+========================================== */
+
+.organizer-event-content {
+  padding: clamp(18px, 2vw, 28px);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.event-category-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  background-color: #dbeafe;
+  color: #2563eb;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: clamp(0.7rem, 1vw, 0.8rem);
+  font-weight: 700;
+  margin-bottom: 16px;
+  text-transform: capitalize;
+}
+
+.organizer-event-content h3 {
+  font-size: clamp(1.15rem, 2vw, 1.6rem);
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 14px;
+  line-height: 1.5;
+  word-break: break-word;
+}
+
+.event-date {
+  color: #64748b;
+  font-size: clamp(0.85rem, 1.2vw, 0.95rem);
+  margin-bottom: 22px;
+  line-height: 1.5;
+}
+
+/* ==========================================
+   EVENT STATS
+========================================== */
+
+.event-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 24px;
+  color: #475569;
+  font-size: clamp(0.85rem, 1.2vw, 0.95rem);
+  font-weight: 500;
+}
+
+/* ==========================================
+   ACTIONS
+========================================== */
+
+.event-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+
+.edit-button,
+.delete-button {
+  flex: 1;
+  min-width: 120px;
+  min-height: 50px;
+  border: none;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: clamp(0.85rem, 1.1vw, 0.95rem);
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  padding: 0 18px;
+}
+
+.edit-button {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: #ffffff;
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.2);
+}
+
+.edit-button:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #1d4ed8, #1e40af);
+}
+
+.delete-button {
+  background-color: #fee2e2;
+  color: #dc2626;
+}
+
+.delete-button:hover {
+  background-color: #fecaca;
+  transform: translateY(-2px);
+}
+
+/* ==========================================
+   ULTRA LARGE DEVICES
+========================================== */
+
+@media screen and (min-width: 1600px) {
+  .organizer-dashboard-page {
+    max-width: 1700px;
+    margin: auto;
+  }
+
+  .organizer-events-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ==========================================
+   LARGE LAPTOPS
+========================================== */
+
+@media screen and (max-width: 1200px) {
+  .organizer-events-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
+/* ==========================================
+   TABLETS
+========================================== */
+
+@media screen and (max-width: 992px) {
+  .dashboard-header {
+    align-items: flex-start;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+}
+
+/* ==========================================
+   MOBILE & SMALL TABLETS
+========================================== */
+
+@media screen and (max-width: 768px) {
+  .organizer-dashboard-page {
+    padding: 18px;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+  }
+
+  .create-event-button {
+    width: 100%;
+  }
+
+  .stat-card {
+    border-radius: 22px;
+  }
+
+  .event-actions {
+    flex-direction: column;
+  }
+
+  .edit-button,
+  .delete-button {
+    width: 100%;
+  }
+}
+
+/* ==========================================
+   MOBILE DEVICES
+========================================== */
+
+@media screen and (max-width: 576px) {
+  .organizer-dashboard-page {
+    padding: 14px;
+  }
+
+  .stats-grid {
+    gap: 16px;
+  }
+
+  .stat-card {
+    flex-direction: row;
+    align-items: center;
+    min-height: auto;
+    padding: 20px;
+  }
+
+  .organizer-event-content {
+    padding: 18px;
+  }
+
+  .organizer-event-image-container {
+    height: 200px;
+  }
+}
+
+/* ==========================================
+   EXTRA SMALL DEVICES
+========================================== */
+
+@media screen and (max-width: 360px) {
+  .organizer-dashboard-page {
+    padding: 10px;
+  }
+
+  .dashboard-header h1 {
+    font-size: 1.6rem;
+  }
+
+  .dashboard-header p {
+    font-size: 0.85rem;
+  }
+
+  .create-event-button {
+    font-size: 0.85rem;
+    min-height: 48px;
+    padding: 12px 16px;
+  }
+
+  .stat-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .stat-icon-container {
+    width: 56px;
+    height: 56px;
+    font-size: 1.3rem;
+  }
+
+  .organizer-event-content h3 {
+    font-size: 1rem;
+  }
+
+  .edit-button,
+  .delete-button {
+    min-height: 46px;
+    font-size: 0.82rem;
+  }
+}

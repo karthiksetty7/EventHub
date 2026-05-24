@@ -1,0 +1,552 @@
+/* ==========================================
+   BOOKING PAGE
+========================================== */
+
+.booking-page {
+  width: 100%;
+  min-height: 100vh;
+
+  padding: clamp(12px, 2vw, 32px);
+
+  background: linear-gradient(180deg, #f8fafc 0%, #eff6ff 100%);
+
+  box-sizing: border-box;
+}
+
+/* ==========================================
+   BOOKING CONTAINER
+========================================== */
+
+.booking-container {
+  width: 100%;
+  max-width: 1700px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: minmax(320px, 1.4fr) minmax(300px, 0.85fr);
+
+  gap: clamp(20px, 3vw, 40px);
+
+  align-items: start;
+}
+
+/* ==========================================
+   LEFT SECTION
+========================================== */
+
+.booking-left-section {
+  width: 100%;
+}
+
+/* ==========================================
+   EVENT IMAGE
+========================================== */
+
+.booking-image-container {
+  width: 100%;
+
+  height: clamp(260px, 42vw, 520px);
+
+  overflow: hidden;
+
+  border-radius: clamp(20px, 2vw, 32px);
+
+  margin-bottom: 28px;
+
+  background-color: #ffffff;
+
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
+}
+
+.booking-event-image {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.4s ease;
+}
+
+.booking-event-image:hover {
+  transform: scale(1.03);
+}
+
+/* ==========================================
+   EVENT INFO
+========================================== */
+
+.booking-event-info {
+  background: rgba(255, 255, 255, 0.94);
+
+  backdrop-filter: blur(10px);
+
+  padding: clamp(22px, 3vw, 34px);
+
+  border-radius: clamp(20px, 2vw, 28px);
+
+  margin-bottom: 28px;
+
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
+
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.booking-event-info h1 {
+  font-size: clamp(2rem, 3vw, 3.4rem);
+
+  color: #0f172a;
+
+  line-height: 1.2;
+
+  margin-bottom: 24px;
+
+  font-weight: 800;
+
+  word-break: break-word;
+}
+
+/* ==========================================
+   META ITEM
+========================================== */
+
+.booking-meta-item {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  margin-bottom: 16px;
+
+  color: #475569;
+
+  font-size: clamp(0.92rem, 1vw, 1rem);
+
+  font-weight: 500;
+
+  line-height: 1.6;
+}
+
+.booking-icon {
+  color: #2563eb;
+
+  font-size: clamp(16px, 1.2vw, 20px);
+
+  flex-shrink: 0;
+}
+
+/* ==========================================
+   SEAT SELECTION
+========================================== */
+
+.seat-selection-container {
+  background: rgba(255, 255, 255, 0.94);
+
+  backdrop-filter: blur(10px);
+
+  padding: clamp(22px, 3vw, 36px);
+
+  border-radius: clamp(20px, 2vw, 28px);
+
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
+
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.seat-selection-container h2 {
+  font-size: clamp(1.4rem, 2vw, 2rem);
+
+  color: #0f172a;
+
+  margin-bottom: 26px;
+
+  font-weight: 700;
+}
+
+/* ==========================================
+   BOOKING SUMMARY
+========================================== */
+
+.booking-summary-section {
+  background: rgba(255, 255, 255, 0.95);
+
+  backdrop-filter: blur(12px);
+
+  padding: clamp(22px, 2.8vw, 36px);
+
+  border-radius: clamp(20px, 2vw, 30px);
+
+  position: sticky;
+
+  top: 100px;
+
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.07);
+
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.booking-summary-section h2 {
+  font-size: clamp(1.5rem, 2vw, 2.1rem);
+
+  color: #0f172a;
+
+  margin-bottom: 28px;
+
+  font-weight: 800;
+}
+
+/* ==========================================
+   SUMMARY CARD
+========================================== */
+
+.summary-card {
+  width: 100%;
+}
+
+.summary-row {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-start;
+
+  gap: 18px;
+
+  margin-bottom: 24px;
+}
+
+.summary-label {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  color: #334155;
+
+  font-size: clamp(0.9rem, 1vw, 1rem);
+
+  font-weight: 700;
+
+  line-height: 1.5;
+}
+
+.summary-icon {
+  color: #2563eb;
+
+  font-size: clamp(15px, 1vw, 18px);
+
+  flex-shrink: 0;
+}
+
+.summary-row p {
+  color: #475569;
+
+  text-align: right;
+
+  word-break: break-word;
+
+  font-size: clamp(0.9rem, 1vw, 1rem);
+
+  font-weight: 600;
+}
+
+/* ==========================================
+   SUMMARY DIVIDER
+========================================== */
+
+.summary-divider {
+  width: 100%;
+
+  height: 1px;
+
+  background-color: #e2e8f0;
+
+  margin: 28px 0;
+}
+
+/* ==========================================
+   TOTAL
+========================================== */
+
+.summary-total {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 16px;
+
+  margin-bottom: 32px;
+}
+
+.summary-total h3 {
+  color: #334155;
+
+  font-size: clamp(1rem, 1.2vw, 1.2rem);
+
+  font-weight: 700;
+}
+
+.summary-total h2 {
+  color: #2563eb;
+
+  font-size: clamp(2rem, 2.6vw, 3rem);
+
+  font-weight: 800;
+
+  margin: 0;
+}
+
+/* ==========================================
+   ERROR MESSAGE
+========================================== */
+
+.booking-error-message {
+  background-color: #fee2e2;
+
+  color: #dc2626;
+
+  padding: 16px 18px;
+
+  border-radius: 16px;
+
+  margin-bottom: 24px;
+
+  font-size: clamp(14px, 1vw, 15px);
+
+  font-weight: 600;
+
+  line-height: 1.6;
+}
+
+/* ==========================================
+   CONFIRM BUTTON
+========================================== */
+
+.confirm-booking-button {
+  width: 100%;
+
+  min-height: clamp(52px, 6vw, 64px);
+
+  border: none;
+
+  border-radius: 18px;
+
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+
+  color: #ffffff;
+
+  font-size: clamp(0.95rem, 1vw, 1.1rem);
+
+  font-weight: 700;
+
+  letter-spacing: 0.3px;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+
+  box-shadow: 0 12px 24px rgba(37, 99, 235, 0.22);
+}
+
+.confirm-booking-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 18px 34px rgba(37, 99, 235, 0.28);
+}
+
+.confirm-booking-button:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+
+  transform: none;
+
+  box-shadow: none;
+}
+
+/* ==========================================
+   EXTRA LARGE DEVICES
+========================================== */
+
+@media screen and (min-width: 1800px) {
+  .booking-container {
+    max-width: 1850px;
+  }
+
+  .booking-summary-section {
+    padding: 42px;
+  }
+
+  .booking-event-info,
+  .seat-selection-container {
+    padding: 40px;
+  }
+}
+
+/* ==========================================
+   LARGE LAPTOPS
+========================================== */
+
+@media screen and (max-width: 1400px) {
+  .booking-container {
+    gap: 30px;
+  }
+}
+
+/* ==========================================
+   TABLETS & SMALL LAPTOPS
+========================================== */
+
+@media screen and (max-width: 992px) {
+  .booking-container {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-summary-section {
+    position: static;
+  }
+
+  .booking-image-container {
+    height: clamp(260px, 55vw, 460px);
+  }
+}
+
+/* ==========================================
+   MOBILE & TABLETS
+========================================== */
+
+@media screen and (max-width: 768px) {
+  .booking-page {
+    padding: 16px;
+  }
+
+  .booking-event-info,
+  .seat-selection-container,
+  .booking-summary-section {
+    padding: 24px;
+  }
+
+  .summary-row {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 8px;
+  }
+
+  .summary-row p {
+    text-align: left;
+  }
+
+  .summary-total {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+}
+
+/* ==========================================
+   MOBILE DEVICES
+========================================== */
+
+@media screen and (max-width: 576px) {
+  .booking-page {
+    padding: 12px;
+  }
+
+  .booking-image-container {
+    height: 240px;
+
+    border-radius: 22px;
+  }
+
+  .booking-event-info,
+  .seat-selection-container,
+  .booking-summary-section {
+    padding: 20px;
+
+    border-radius: 22px;
+  }
+
+  .confirm-booking-button {
+    border-radius: 16px;
+  }
+
+  .booking-summary-section {
+    top: 0;
+  }
+}
+
+/* ==========================================
+   SMALL MOBILE DEVICES
+========================================== */
+
+@media screen and (max-width: 360px) {
+  .booking-page {
+    padding: 10px;
+  }
+
+  .booking-event-info,
+  .seat-selection-container,
+  .booking-summary-section {
+    padding: 16px;
+  }
+
+  .booking-event-info h1 {
+    font-size: 1.5rem;
+  }
+
+  .seat-selection-container h2,
+  .booking-summary-section h2 {
+    font-size: 1.2rem;
+  }
+
+  .summary-total h2 {
+    font-size: 1.8rem;
+  }
+
+  .confirm-booking-button {
+    font-size: 14px;
+  }
+}
+
+/* ==========================================
+   ULTRA SMALL DEVICES
+========================================== */
+
+@media screen and (max-width: 280px) {
+  .booking-event-info h1 {
+    font-size: 1.3rem;
+  }
+
+  .booking-event-info,
+  .seat-selection-container,
+  .booking-summary-section {
+    padding: 14px;
+  }
+
+  .summary-label,
+  .summary-row p {
+    font-size: 13px;
+  }
+}
+
+/* ==========================================
+   LANDSCAPE MOBILE DEVICES
+========================================== */
+
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  .booking-image-container {
+    height: 280px;
+  }
+
+  .booking-summary-section {
+    position: static;
+  }
+}

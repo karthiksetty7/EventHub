@@ -1,0 +1,416 @@
+/* ==========================================
+   EXTRA LARGE DEVICES (1400px and below)
+========================================== */
+
+@media screen and (max-width: 1400px) {
+  .unauthorized-card {
+    max-width: 580px;
+
+    padding: 48px 36px;
+  }
+
+  .unauthorized-card h1 {
+    font-size: 38px;
+  }
+
+  .unauthorized-card p {
+    font-size: 17px;
+  }
+}
+
+/* ==========================================
+   LARGE LAPTOPS (1200px and below)
+========================================== */
+
+@media screen and (max-width: 1200px) {
+  .unauthorized-page {
+    padding: 22px;
+  }
+
+  .unauthorized-card {
+    max-width: 540px;
+
+    padding: 46px 34px;
+  }
+
+  .unauthorized-icon-container {
+    width: 100px;
+
+    height: 100px;
+  }
+
+  .unauthorized-icon {
+    font-size: 44px;
+  }
+
+  .unauthorized-card h1 {
+    font-size: 36px;
+  }
+
+  .unauthorized-card p {
+    font-size: 16px;
+  }
+
+  .unauthorized-description {
+    font-size: 14px;
+  }
+}
+
+/* ==========================================
+   TABLETS LANDSCAPE (992px and below)
+========================================== */
+
+@media screen and (max-width: 992px) {
+  .unauthorized-card {
+    max-width: 500px;
+
+    padding: 42px 30px;
+
+    border-radius: 28px;
+  }
+
+  .unauthorized-icon-container {
+    width: 94px;
+
+    height: 94px;
+
+    margin-bottom: 24px;
+  }
+
+  .unauthorized-icon {
+    font-size: 40px;
+  }
+
+  .unauthorized-card h1 {
+    font-size: 32px;
+  }
+
+  .unauthorized-card p {
+    font-size: 15px;
+
+    line-height: 1.6;
+  }
+
+  .unauthorized-description {
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    margin-bottom: 30px;
+  }
+
+  .home-button,
+  .back-button {
+    min-width: 160px;
+
+    height: 54px;
+  }
+}
+
+/* ==========================================
+   TABLETS PORTRAIT (768px and below)
+========================================== */
+
+@media screen and (max-width: 768px) {
+  .unauthorized-page {
+    padding: 20px;
+  }
+
+  .unauthorized-card {
+    width: 100%;
+
+    max-width: 100%;
+
+    padding: 40px 28px;
+
+    border-radius: 26px;
+  }
+
+  .unauthorized-icon-container {
+    width: 88px;
+
+    height: 88px;
+  }
+
+  .unauthorized-icon {
+    font-size: 36px;
+  }
+
+  .unauthorized-card h1 {
+    font-size: 30px;
+  }
+
+  .unauthorized-card p {
+    font-size: 14px;
+  }
+
+  .unauthorized-description {
+    font-size: 13px;
+  }
+
+  .unauthorized-actions {
+    gap: 14px;
+  }
+}
+
+/* ==========================================
+   MOBILE DEVICES (576px and below)
+========================================== */
+
+@media screen and (max-width: 576px) {
+  .unauthorized-page {
+    padding: 16px;
+  }
+
+  .unauthorized-card {
+    padding: 34px 22px;
+
+    border-radius: 22px;
+  }
+
+  .unauthorized-icon-container {
+    width: 78px;
+
+    height: 78px;
+
+    margin-bottom: 22px;
+  }
+
+  .unauthorized-icon {
+    font-size: 32px;
+  }
+
+  .unauthorized-card h1 {
+    font-size: 26px;
+
+    margin-bottom: 12px;
+  }
+
+  .unauthorized-card p {
+    font-size: 13px;
+
+    margin-bottom: 14px;
+  }
+
+  .unauthorized-description {
+    font-size: 12px;
+
+    margin-bottom: 26px;
+  }
+
+  .unauthorized-actions {
+    flex-direction: column;
+
+    width: 100%;
+  }
+
+  .home-button,
+  .back-button {
+    width: 100%;
+
+    min-width: 100%;
+
+    height: 52px;
+
+    font-size: 14px;
+  }
+}
+
+/* ==========================================
+   SMALL MOBILE DEVICES (480px and below)
+========================================== */
+
+@media screen and (max-width: 480px) {
+  .unauthorized-card {
+    padding: 30px 18px;
+  }
+
+  .unauthorized-icon-container {
+    width: 72px;
+
+    height: 72px;
+  }
+
+  .unauthorized-icon {
+    font-size: 28px;
+  }
+
+  .unauthorized-card h1 {
+    font-size: 24px;
+  }
+
+  .unauthorized-card p {
+    font-size: 12px;
+  }
+
+  .unauthorized-description {
+    font-size: 11px;
+  }
+
+  .home-button,
+  .back-button {
+    height: 50px;
+
+    border-radius: 14px;
+
+    font-size: 13px;
+  }
+}
+
+/* ==========================================
+   EXTRA SMALL DEVICES (360px and below)
+========================================== */
+
+@media screen and (max-width: 360px) {
+  .unauthorized-page {
+    padding: 12px;
+  }
+
+  .unauthorized-card {
+    padding: 26px 14px;
+
+    border-radius: 18px;
+  }
+
+  .unauthorized-icon-container {
+    width: 64px;
+
+    height: 64px;
+
+    margin-bottom: 18px;
+  }
+
+  .unauthorized-icon {
+    font-size: 24px;
+  }
+
+  .unauthorized-card h1 {
+    font-size: 22px;
+  }
+
+  .unauthorized-card p {
+    font-size: 11px;
+
+    line-height: 1.5;
+  }
+
+  .unauthorized-description {
+    font-size: 10px;
+
+    line-height: 1.6;
+
+    margin-bottom: 22px;
+  }
+
+  .home-button,
+  .back-button {
+    height: 46px;
+
+    font-size: 12px;
+
+    gap: 8px;
+  }
+}
+
+/* ==========================================
+   FOLDABLE DEVICES
+========================================== */
+
+@media screen and (max-width: 280px) {
+  .unauthorized-card {
+    padding: 20px 10px;
+  }
+
+  .unauthorized-icon-container {
+    width: 56px;
+
+    height: 56px;
+  }
+
+  .unauthorized-icon {
+    font-size: 20px;
+  }
+
+  .unauthorized-card h1 {
+    font-size: 18px;
+  }
+
+  .unauthorized-card p,
+  .unauthorized-description {
+    font-size: 9px;
+  }
+
+  .home-button,
+  .back-button {
+    height: 42px;
+
+    font-size: 10px;
+  }
+}
+
+/* ==========================================
+   LARGE HEIGHT SCREENS
+========================================== */
+
+@media screen and (min-height: 1000px) {
+  .unauthorized-page {
+    min-height: 100vh;
+  }
+
+  .unauthorized-card {
+    padding-top: 70px;
+
+    padding-bottom: 70px;
+  }
+}
+
+/* ==========================================
+   LANDSCAPE MOBILE DEVICES
+========================================== */
+
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  .unauthorized-page {
+    padding: 14px;
+  }
+
+  .unauthorized-card {
+    padding: 22px 20px;
+  }
+
+  .unauthorized-icon-container {
+    width: 56px;
+
+    height: 56px;
+
+    margin-bottom: 14px;
+  }
+
+  .unauthorized-icon {
+    font-size: 22px;
+  }
+
+  .unauthorized-card h1 {
+    font-size: 22px;
+
+    margin-bottom: 8px;
+  }
+
+  .unauthorized-card p {
+    font-size: 11px;
+
+    margin-bottom: 10px;
+  }
+
+  .unauthorized-description {
+    font-size: 10px;
+
+    margin-bottom: 18px;
+  }
+
+  .home-button,
+  .back-button {
+    height: 42px;
+
+    font-size: 11px;
+  }
+}

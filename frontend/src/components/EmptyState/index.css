@@ -1,0 +1,190 @@
+/* ==========================================
+   EMPTY STATE CONTAINER
+========================================== */
+
+.empty-state-container {
+  width: 100%;
+
+  min-height: 420px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+
+  text-align: center;
+
+  padding: 40px 20px;
+}
+
+/* ==========================================
+   ICON CONTAINER
+========================================== */
+
+.empty-icon-container {
+  width: 120px;
+
+  height: 120px;
+
+  border-radius: 50%;
+
+  background-color: #eff6ff;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  margin-bottom: 26px;
+}
+
+.empty-icon {
+  font-size: 52px;
+
+  color: #2563eb;
+}
+
+/* ==========================================
+   TITLE
+========================================== */
+
+.empty-title {
+  font-size: 34px;
+
+  font-weight: 700;
+
+  color: #0f172a;
+
+  margin-bottom: 16px;
+
+  line-height: 1.3;
+}
+
+/* ==========================================
+   DESCRIPTION
+========================================== */
+
+.empty-description {
+  max-width: 600px;
+
+  font-size: 17px;
+
+  color: #64748b;
+
+  line-height: 1.8;
+
+  margin-bottom: 28px;
+}
+
+/* ==========================================
+   BUTTON
+========================================== */
+
+.empty-button {
+  text-decoration: none;
+
+  background-color: #2563eb;
+
+  color: #ffffff;
+
+  padding: 14px 26px;
+
+  border-radius: 12px;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  transition: 0.3s ease;
+}
+
+.empty-button:hover {
+  background-color: #1d4ed8;
+
+  transform: translateY(-2px);
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+========================================== */
+
+/* Tablets */
+@media screen and (max-width: 768px) {
+  .empty-state-container {
+    min-height: 360px;
+  }
+
+  .empty-icon-container {
+    width: 100px;
+
+    height: 100px;
+  }
+
+  .empty-icon {
+    font-size: 42px;
+  }
+
+  .empty-title {
+    font-size: 28px;
+  }
+
+  .empty-description {
+    font-size: 15px;
+  }
+}
+
+/* Mobile Devices */
+@media screen and (max-width: 576px) {
+  .empty-state-container {
+    padding: 30px 16px;
+  }
+
+  .empty-icon-container {
+    width: 86px;
+
+    height: 86px;
+  }
+
+  .empty-icon {
+    font-size: 36px;
+  }
+
+  .empty-title {
+    font-size: 24px;
+  }
+
+  .empty-description {
+    font-size: 14px;
+
+    line-height: 1.6;
+  }
+
+  .empty-button {
+    width: 100%;
+
+    max-width: 260px;
+
+    text-align: center;
+
+    padding: 12px 20px;
+  }
+}
+
+/* Small Mobile Devices */
+@media screen and (max-width: 360px) {
+  .empty-title {
+    font-size: 20px;
+  }
+
+  .empty-description {
+    font-size: 13px;
+  }
+
+  .empty-button {
+    font-size: 13px;
+  }
+}
