@@ -202,7 +202,7 @@ const AdminDashboard = () => {
                 <tr key={b.id}>
                   <td>{b.user_name}</td>
                   <td>{b.event_title}</td>
-                  <td>{b.seat_number}</td>
+                  <td>{Number(b.seat_number)}</td>
                   <td>₹{b.ticket_price}</td>
                 </tr>
               ))}
