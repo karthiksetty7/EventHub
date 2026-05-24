@@ -122,7 +122,7 @@ const BookingHistory = () => {
                   {/* Seat Number */}
                   <div className="booking-detail-item">
                     <FaTicketAlt className="booking-detail-icon" />
-                    <p>Seat: {eachBooking.seat_number}</p>
+                    <p>Seat: {Number(eachBooking.seat_number)}</p>
                   </div>
 
                   {/* Price */}
