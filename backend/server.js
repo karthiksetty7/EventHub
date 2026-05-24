@@ -1,36 +1,46 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
-
-// Importing Database Connection Bootstrapper
 import { initializeDB } from "./config/db.js";
 
-// Importing individual route modules
+// Routes
 import authRoutes from "./routes/authRoutes.js";
 import eventRoutes from "./routes/eventRoutes.js";
 import bookingRoutes from "./routes/bookingRoutes.js";
 import adminRoutes from "./routes/adminRoutes.js";
 
-// Importing global error handler middleware
+// Middleware
 import errorMiddleware from "./middleware/errorMiddleware.js";
 
-// Load environment variables
 dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// Standard Express Middlewares
+// Dynamic CORS Configuration
+const allowedOrigins = [
+  "http://localhost:3000",
+  "https://event-hub-three-ruby.vercel.app"
+];
+
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: function (origin, callback) {
+      // Allow requests with no origin (like mobile apps or curl) 
+      // or if the origin is in our allowed list
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
-  }),
+  })
 );
 
-// FIX: Disable caching for all API routes to prevent 304 errors
+// Disable caching to ensure real-time data
 app.use((req, res, next) => {
   res.set("Cache-Control", "no-store, no-cache, must-revalidate, private");
   next();
@@ -39,42 +49,28 @@ app.use((req, res, next) => {
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Serving static event uploaded images
-app.use("/uploads", express.static("uploads"));
-
-// ==========================================
-// MOUNTING ROUTE LAYERS
-// ==========================================
+// Routes
 app.use("/api/auth", authRoutes);
 app.use("/api/events", eventRoutes);
 app.use("/api/bookings", bookingRoutes);
 app.use("/api/admin", adminRoutes);
 
-// Fallback Route for Undefined Endpoints
+// Fallback for undefined routes
 app.use("*", (req, res) => {
-  res.status(404).json({
-    success: false,
-    message: `Route ${req.originalUrl} not found`,
-  });
+  res.status(404).json({ success: false, message: `Route ${req.originalUrl} not found` });
 });
 
-// Global Error Handler (Must be mounted last)
 app.use(errorMiddleware);
 
-// ==========================================
-// ASYNC SERVER LIFECYCLE BOOTSTRAP
-// ==========================================
+// Initialize DB and Start Server
 const startServer = async () => {
   try {
     await initializeDB();
-    app.listen(PORT, () => {
-      console.log(`🚀 Server running on port http://localhost:${PORT}`);
+    app.listen(PORT, "0.0.0.0", () => {
+      console.log(`🚀 Server running on port ${PORT}`);
     });
   } catch (error) {
-    console.error(
-      "❌ Critical System Error: Failed to start the backend server:",
-      error,
-    );
+    console.error("❌ Critical System Error: Failed to start server:", error);
     process.exit(1);
   }
 };
