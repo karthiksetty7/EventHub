@@ -106,26 +106,64 @@ Cloudinary + Mailtrap
 
 # 📂 Project Structure
 
-EventHub
+```plaintext
+EventHub/
 │
-├── frontend
-│   ├── src
-│   │   ├── api
-│   │   ├── pages
-│   │   ├── services
-│   │   ├── components
-│   │   └── assets
+├── frontend/                           # React Application
+│   │
+│   ├── public/                         # Static assets
+│   │
+│   └── src/
+│       ├── api/                        # API communication layer
+│       │   ├── authApi.js
+│       │   ├── eventApi.js
+│       │   ├── bookingApi.js
+│       │   └── adminApi.js
+│       │
+│       ├── components/                 # Reusable UI components
+│       │
+│       ├── pages/                      # Application screens
+│       │
+│       ├── services/                   # Axios instance & helpers
+│       │
+│       ├── assets/                     # Images, icons, styles
+│       │
+│       ├── context/                    # Global state management
+│       │
+│       ├── hooks/                      # Custom React hooks
+│       │
+│       ├── utils/                      # Frontend utility functions
+│       │
+│       ├── App.jsx
+│       └── main.jsx
 │
-├── backend
-│   ├── config
-│   ├── controllers
-│   ├── middleware
-│   ├── models
-│   ├── routes
-│   ├── utils
-│   └── uploads
+├── backend/                            # Express API Server
+│   │
+│   ├── config/                         # DB & environment setup
+│   │
+│   ├── controllers/                    # Request handlers
+│   │
+│   ├── middleware/                     # Auth, validation, uploads
+│   │
+│   ├── models/                         # Database operations
+│   │
+│   ├── routes/                         # API endpoints
+│   │
+│   ├── utils/                          # Helpers (JWT, Email, QR)
+│   │
+│   ├── uploads/                        # Uploaded event images
+│   │
+│   └── server.js                       # Application entry point
+│
+├── database/
+│   └── SQLite / Turso                  # Persistent storage
+│
+├── .env                                # Environment variables
+│
+├── package.json
 │
 └── README.md
+```
 
 ---
 
