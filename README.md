@@ -1,406 +1,181 @@
-# 🎟️ Event Management System
+# 🎟️ EventHub – Smart Event Booking & Ticket Management Platform
 
-A complete full-stack Event Management System built using the MERN Stack (MongoDB, Express.js, React.js, Node.js).
+EventHub is a full-stack event booking and management platform that allows attendees to discover and book events, organizers to create and manage events, and administrators to monitor platform activity through analytics dashboards.
 
-This platform allows users to:
-- Browse events
-- Book event tickets
-- Manage bookings
-- Create and manage events
-- Admin monitoring and management
+## Features
 
-The application supports:
-- Authentication & Authorization
-- Role-based Access
-- Event Booking System
-- Organizer Dashboard
+- User Authentication & Authorization
+- Event Creation & Management
+- Dynamic Ticket Pricing
+- Real-Time Seat Booking
+- QR-Based Ticket Generation
+- Email Notifications
+- Role-Based Access Control
+- SQLite/Turso Data Persistence
 - Admin Dashboard
-- Image Uploads
-- Responsive UI
-- Secure Backend APIs
+- Deployment Ready Architecture
 
 ---
 
-# 🚀 Tech Stack
+# 🚀 Live Demo
+
+Frontend:
+https://event-hub-three-ruby.vercel.app
+
+Backend:
+https://eventhub-lh90.onrender.com
+
+---
+
+# 📌 Project Overview
+
+EventHub provides a complete event booking experience.
+
+### Attendee
+- Register/Login
+- Browse events
+- Search & Filter
+- Book seats
+- View bookings
+- Cancel booking
+
+### Organizer
+- Create events
+- Upload event images
+- Manage bookings
+- Update/Delete events
+
+### Admin
+- Dashboard
+- User management
+- Event monitoring
+- Analytics
+
+---
+
+# 🏗 System Architecture
+
+Frontend (React + Axios)
+
+↓
+
+Backend (Node.js + Express)
+
+↓
+
+SQLite / Turso Database
+
+↓
+
+Cloudinary + Mailtrap
+
+---
+
+# 🛠 Tech Stack
 
 ## Frontend
-- React JS
-- React Router DOM
+- React.js
 - Axios
-- React Icons
-- CSS3
-- Context API
+- React Router
+- CSS
 
 ## Backend
 - Node.js
 - Express.js
-- MongoDB
-- Mongoose
-- JWT Authentication
-- bcryptjs
+- JWT
 - Multer
-- dotenv
-- cors
+- Nodemailer
+- QRCode
+
+## Database
+- SQLite
+- Turso
+
+## Deployment
+- Vercel
 
 ---
 
-# 📁 Project Structure
+# 📂 Project Structure
 
-## Frontend Structure
+EventHub
 
-```bash
 frontend/
-│
-├── public/
 ├── src/
-│   ├── api/
-│   ├── assets/
-│   ├── components/
-│   ├── context/
-│   ├── hooks/
-│   ├── layouts/
-│   ├── pages/
-│   ├── routes/
-│   ├── services/
-│   ├── utils/
-│   ├── App.js
-│   └── index.js
-```
+│ ├── api/
+│ ├── pages/
+│ ├── services/
+│ ├── components/
 
----
-
-## Backend Structure
-
-```bash
 backend/
-│
 ├── config/
 ├── controllers/
 ├── middleware/
 ├── models/
 ├── routes/
-├── uploads/
 ├── utils/
-├── .env
-├── server.js
-└── package.json
-```
+├── uploads/
+
+README.md
 
 ---
 
-# 🔐 User Roles
+# 🔐 Authentication
 
-## 1. Attendee
-- Register/Login
-- Browse events
-- Book tickets
-- View booking history
+JWT Authentication
 
-## 2. Organizer
-- Create events
-- Edit events
-- Delete events
-- Manage own events
+Flow:
 
-## 3. Admin
-- Monitor platform
-- Manage users
-- Manage events
-- Manage bookings
+Register
 
----
+↓
 
-# ✨ Features
+Validate
 
-# Authentication Features
-- User Registration
-- User Login
-- JWT Authentication
-- Protected Routes
-- Role-Based Access
+↓
 
-# Event Features
-- Create Event
-- Edit Event
-- Delete Event
-- Event Search
-- Event Filtering
-- Event Details Page
-- Event Image Upload
+Store User
 
-# Booking Features
-- Seat Selection
-- Ticket Booking
-- Booking History
-- Booking Management
+↓
 
-# Dashboard Features
-- Organizer Dashboard
-- Admin Dashboard
-- Analytics Overview
+Generate Token
 
-# UI Features
-- Fully Responsive Design
-- Mobile Friendly
-- Tablet Optimized
-- Modern UI/UX
-- Loading States
-- Error Handling
+↓
+
+Login
+
+↓
+
+Protected Routes
 
 ---
 
-# 🛠️ Installation Guide
+# 👥 Roles
 
-# 1️⃣ Clone Repository
-
-```bash
-git clone <repository-url>
-```
-
----
-
-# 2️⃣ Backend Setup
-
-## Navigate to backend folder
-
-```bash
-cd backend
-```
+| Role | Access |
+|------|--------|
+| Attendee | Book Events |
+| Organizer | Manage Events |
+| Admin | Full Access |
 
 ---
 
-## Install Dependencies
+# 🗄 Database
 
-```bash
-npm install
-```
+## Users
 
----
+- id
+- name
+- email
+- password
+- role
+- profile_image
+- created_at
 
-## Create `.env` File
+## Events
 
-Create a `.env` file inside backend folder.
-
-```env
-PORT=5000
-
-MONGO_URI=your_mongodb_connection_string
-
-JWT_SECRET=your_secret_key
-```
-
----
-
-## Start Backend Server
-
-### Development Mode
-
-```bash
-npm run dev
-```
-
-### Production Mode
-
-```bash
-npm start
-```
-
----
-
-## Backend Running URL
-
-```bash
-http://localhost:5000
-```
-
----
-
-# 3️⃣ Frontend Setup
-
-## Navigate to frontend folder
-
-```bash
-cd frontend
-```
-
----
-
-## Install Dependencies
-
-```bash
-npm install
-```
-
----
-
-## Create `.env` File
-
-```env
-REACT_APP_API_URL=http://localhost:5000/api
-```
-
----
-
-## Start Frontend
-
-```bash
-npm start
-```
-
----
-
-## Frontend Running URL
-
-```bash
-http://localhost:3000
-```
-
----
-
-# 🔗 Frontend ↔ Backend Connection
-
-The frontend communicates with backend APIs using Axios.
-
-## Axios Base URL
-
-```javascript
-const axiosInstance = axios.create({
-  baseURL: process.env.REACT_APP_API_URL,
-})
-```
-
----
-
-# 📡 API Endpoints
-
-# Authentication APIs
-
-| Method | Endpoint | Description |
-|---|---|---|
-| POST | `/api/auth/register` | Register User |
-| POST | `/api/auth/login` | Login User |
-
----
-
-# Event APIs
-
-| Method | Endpoint | Description |
-|---|---|---|
-| GET | `/api/events` | Get All Events |
-| GET | `/api/events/:id` | Get Single Event |
-| POST | `/api/events/create` | Create Event |
-| PUT | `/api/events/update/:id` | Update Event |
-| DELETE | `/api/events/delete/:id` | Delete Event |
-
----
-
-# Booking APIs
-
-| Method | Endpoint | Description |
-|---|---|---|
-| POST | `/api/bookings/create` | Create Booking |
-| GET | `/api/bookings/my-bookings` | User Bookings |
-
----
-
-# Admin APIs
-
-| Method | Endpoint | Description |
-|---|---|---|
-| GET | `/api/admin/dashboard` | Admin Dashboard |
-| DELETE | `/api/admin/delete-event/:id` | Delete Event |
-
----
-
-# 🧪 Backend Testing Guide
-
-# Step 1: Start Backend Server
-
-```bash
-cd backend
-
-npm run dev
-```
-
----
-
-# Step 2: Check Server Status
-
-Open browser:
-
-```bash
-http://localhost:5000
-```
-
-Expected Response:
-
-```json
-{
-  "success": true,
-  "message": "Event Management API is running successfully"
-}
-```
-
----
-
-# Step 3: Test APIs Using Postman
-
-## Register API
-
-### POST
-
-```bash
-http://localhost:5000/api/auth/register
-```
-
-### Request Body
-
-```json
-{
-  "name": "Karthik",
-  "email": "karthik@gmail.com",
-  "password": "123456",
-  "role": "attendee"
-}
-```
-
----
-
-## Login API
-
-### POST
-
-```bash
-http://localhost:5000/api/auth/login
-```
-
-### Request Body
-
-```json
-{
-  "email": "karthik@gmail.com",
-  "password": "123456"
-}
-```
-
----
-
-## Create Event API
-
-### POST
-
-```bash
-http://localhost:5000/api/events/create
-```
-
-### Headers
-
-```bash
-Authorization: Bearer your_token
-```
-
-### Body
-Use form-data:
+- id
+- organizer_id
 - title
 - description
 - category
@@ -408,160 +183,253 @@ Use form-data:
 - event_date
 - event_time
 - total_seats
+- available_seats
 - base_price
-- image
+- current_price
+- image_url
+- status
+
+## Tickets
+
+- id
+- user_id
+- event_id
+- seat_number
+- ticket_price
+- booking_status
+- qr_code
+
+## Booking History
+
+- BOOKED
+- CANCELLED
 
 ---
 
-# 💻 Frontend Testing Guide
+# 🎯 APIs
 
-# Step 1: Start Frontend
+## Authentication
 
-```bash
+POST /api/auth/register
+
+POST /api/auth/login
+
+GET /api/auth/me
+
+---
+
+## Events
+
+POST /api/events
+
+GET /api/events
+
+GET /api/events/:id
+
+PUT /api/events/:id
+
+DELETE /api/events/:id
+
+---
+
+## Bookings
+
+POST /api/bookings
+
+GET /api/bookings/my-bookings
+
+GET /api/bookings/public/booked-seats/:eventId
+
+DELETE /api/bookings/:bookingId
+
+---
+
+## Admin
+
+GET /api/admin/dashboard
+
+DELETE /api/admin/users/:id
+
+DELETE /api/admin/events/:id
+
+---
+
+# 💰 Dynamic Pricing
+
+40% seats booked → +10%
+
+70% seats booked → +20%
+
+Example:
+
+Base ₹1000
+
+50% booked → ₹1100
+
+70% booked → ₹1200
+
+---
+
+# 🎫 Booking Flow
+
+Login
+
+↓
+
+Select Event
+
+↓
+
+Choose Seat
+
+↓
+
+Validate
+
+↓
+
+Generate QR
+
+↓
+
+Save Booking
+
+↓
+
+Update Inventory
+
+↓
+
+Send Email
+
+---
+
+# ☁️ File Upload
+
+Allowed:
+
+- JPG
+- JPEG
+- PNG
+- WEBP
+
+Limit:
+
+5MB
+
+Folder:
+
+uploads/event-images
+
+---
+
+# 📩 Email Service
+
+Booking confirmation includes:
+
+- Event Details
+- QR Ticket
+- User Details
+- Seat Information
+
+---
+
+# 🧠 Validations
+
+### Register
+
+- Email validation
+- Password validation
+- Role validation
+
+### Event
+
+- Date validation
+- Seat validation
+- Price validation
+
+### Booking
+
+- Seat availability
+- Duplicate prevention
+
+---
+
+# ⚙ Environment Variables
+
+Backend .env
+
+PORT=
+
+JWT_SECRET=
+
+TURSO_DATABASE_URL=
+
+TURSO_AUTH_TOKEN=
+
+EMAIL_HOST=
+
+EMAIL_PORT=
+
+EMAIL_USER=
+
+EMAIL_PASS=
+
+---
+
+# ▶ Installation
+
+Clone
+
+git clone <repo-url>
+
+Backend
+
+cd backend
+
+npm install
+
+npm run dev
+
+Frontend
+
 cd frontend
 
+npm install
+
 npm start
-```
 
 ---
 
-# Step 2: Open Application
+# 🧪 Testing
 
-```bash
-http://localhost:3000
-```
+✔ Register
 
----
+✔ Login
 
-# Step 3: Test Application Flow
+✔ Create Event
 
-## Test User Authentication
-- Register account
-- Login account
-- Logout account
+✔ Upload Image
 
----
+✔ Book Seat
 
-## Test Events
-- View events
-- Search events
-- Open event details
+✔ Generate QR
+
+✔ Email Sent
+
+✔ Dashboard
 
 ---
 
-## Test Booking
-- Select seats
-- Book tickets
-- View booking history
+# 📈 Future Scope
+
+- Payment Gateway
+- Notifications
+- PDF Tickets
+- Recommendations
 
 ---
 
-## Test Organizer Features
-- Create event
-- Edit event
-- Delete event
+# 👨‍💻 Author
 
----
-
-## Test Admin Features
-- Open admin dashboard
-- View analytics
-- Delete events
-
----
-
-# 🔒 Security Features
-
-- JWT Token Authentication
-- Password Hashing
-- Protected APIs
-- Role-Based Authorization
-- Input Validation
-- Error Middleware
-
----
-
-# 📱 Responsive Design
-
-The application is optimized for:
-- Mobile Devices
-- Tablets
-- Laptops
-- Desktops
-- Foldable Devices
-
----
-
-# 📸 Image Upload Support
-
-Event organizers can upload:
-- Event banners
-- Event posters
-- Event thumbnails
-
-Images are stored inside:
-
-```bash
-backend/uploads/
-```
-
----
-
-# ⚡ Performance Features
-
-- Lazy Loading Ready
-- Optimized API Calls
-- Context API State Management
-- Reusable Components
-- Modular Folder Structure
-
----
-
-# ❌ Common Errors & Fixes
-
-# MongoDB Connection Error
-
-Check:
-```env
-MONGO_URI
-```
-
----
-
-# JWT Error
-
-Check:
-```env
-JWT_SECRET
-```
-
----
-
-# CORS Error
-
-Ensure backend uses:
-
-```javascript
-app.use(cors())
-```
-
----
-
-# Frontend API Error
-
-Check:
-```env
-REACT_APP_API_URL
-```
-
----
-
-# 👨‍💻 Developer
-
-Developed using MERN Stack Architecture.
-
----
-
-# 📄 License
-
-This project is developed for educational and portfolio purposes.
+Full Stack Event Booking & Management Platform
