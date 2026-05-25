@@ -107,24 +107,25 @@ Cloudinary + Mailtrap
 # 📂 Project Structure
 
 EventHub
-
-frontend/
-├── src/
-│ ├── api/
-│ ├── pages/
-│ ├── services/
-│ ├── components/
-
-backend/
-├── config/
-├── controllers/
-├── middleware/
-├── models/
-├── routes/
-├── utils/
-├── uploads/
-
-README.md
+│
+├── frontend
+│   ├── src
+│   │   ├── api
+│   │   ├── pages
+│   │   ├── services
+│   │   ├── components
+│   │   └── assets
+│
+├── backend
+│   ├── config
+│   ├── controllers
+│   ├── middleware
+│   ├── models
+│   ├── routes
+│   ├── utils
+│   └── uploads
+│
+└── README.md
 
 ---
 
