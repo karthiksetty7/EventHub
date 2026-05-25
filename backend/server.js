@@ -57,6 +57,7 @@ app.get("/", (req, res) => {
     message: "Connection established with Render. API is running!" 
   });
 });
+
 app.use("/api/auth", authRoutes);
 app.use("/api/events", eventRoutes);
 app.use("/api/bookings", bookingRoutes);
