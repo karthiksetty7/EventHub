@@ -23,7 +23,7 @@ Frontend:
 https://event-hub-three-ruby.vercel.app
 
 Backend:
-https://eventhub-lh90.onrender.com
+https://eventhub-lh90.onrender.com/
 
 ---
 
