@@ -6,7 +6,6 @@ EventHub is a full-stack event booking and management platform that allows atten
 
 - User Authentication & Authorization
 - Event Creation & Management
-- Dynamic Ticket Pricing
 - Real-Time Seat Booking
 - QR-Based Ticket Generation
 - Email Notifications
