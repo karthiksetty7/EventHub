@@ -53,6 +53,14 @@ EventHub provides a complete event booking experience.
 
 ---
 
+## 🔑 Demo Login Working Credentials
+
+Admin | admin@example.com | Admin@123  
+Organizer | organizer@example.com | Organizer@123  
+Attendee | attendee@example.com | Attendee@123  
+
+---
+
 # 🏗 System Architecture
 
 Frontend (React + Axios)
