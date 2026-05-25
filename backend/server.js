@@ -50,6 +50,13 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Routes
+// Testing Route
+app.get("/", (req, res) => {
+  res.status(200).json({ 
+    success: true, 
+    message: "Connection established with Render. API is running!" 
+  });
+});
 app.use("/api/auth", authRoutes);
 app.use("/api/events", eventRoutes);
 app.use("/api/bookings", bookingRoutes);
